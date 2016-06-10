@@ -1,0 +1,23 @@
+@import "modules";
+
+.page {
+  size: A4;
+  margin: 0;
+}
+
+article {
+  @include card(3);
+  padding: 5px;
+}
+
+ul > li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillBar {
+  @include card(1);
+  height: 1em;
+  background-color: blue;
+}
