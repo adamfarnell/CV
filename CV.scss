@@ -1,23 +1,110 @@
 @import "modules";
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import "font-awesome/scss/font-awesome.scss"; 
+
+// scheme1
+// $color1: #703439;
+// $color2: #F0E1D1;
+// $color3: #A79C8E;
+// $color4: #BEBDBC;
+// $color5: #41403F;
+
+$color1: #703439;
+$color2: #8F847C;
+$color3: #D9CFBE;
+$color4: #413941;
+$color5: #A4554A;
+$color6: #E0AFAC;
+
+.palette {
+  display: flex;
+  color: black;
+  height: 40px;
+  width: 40px;
+}
+.color1 { background-color: $color1; }
+.color2 { background-color: $color2; }
+.color3 { background-color: $color3; }
+.color4 { background-color: $color4; }
+.color5 { background-color: $color5; }
+
+h2, h1 {
+  // @include card(4);
+  margin: 0;
+  padding: 10px;
+  background-color: $color1;
+  color: $color3;
+  border-radius: 2px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  // border: 1px solid $color2;
+}
+
+#proskills {
+  background-color: $color5;
+  color: $color3;
+  font-weight: bold;
+  // border-top: 1px solid $color3;
+  // border-bottom: 1px solid $color4;
+}
+
+h3 {
+  margin: 0;
+}
 
 .page {
   size: A4;
   margin: 0;
+  background-color: $color4;
+  font-family: 'Slabo 27px', serif;
+  color: $color5;
+  padding-top: 10px;
 }
 
 article {
-  @include card(3);
+  @include card(2);
   padding: 5px;
+  margin: 10px;
+  // width: 50%;
+  // border: 1px solid $color1;
+  border-radius: 2px;
+  
+  background-color: $color3;
 }
 
-ul > li {
+header {
+  text-align: center;
+  display: block;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  > li {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  }
+}
+
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  > article {
+    width: 220px;
+    > header {
+      background-color: $color5;
+      border-radius: 2px;
+      color: $color3;
+      padding: 2px;
+    }
+  }
 }
 
 .skillBar {
   @include card(1);
   height: 1em;
-  background-color: blue;
+  background-color: $color4;
+  border-radius: 1px;
 }
