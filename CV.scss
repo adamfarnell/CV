@@ -29,7 +29,7 @@ $color6: #E0AFAC;
 .color4 { background-color: $color4; }
 .color5 { background-color: $color5; }
 
-h2, h1 {
+.title {
   // @include card(4);
   margin: 0;
   padding: 10px;
@@ -40,7 +40,8 @@ h2, h1 {
   // border: 1px solid $color2;
 }
 
-#proskills {
+.banner-title {
+  display: block;
   background-color: $color5;
   color: $color3;
   font-weight: bold;
@@ -48,7 +49,7 @@ h2, h1 {
   // border-bottom: 1px solid $color4;
 }
 
-h3 {
+.flex-title {
   margin: 0;
 }
 
@@ -61,7 +62,7 @@ h3 {
   padding-top: 10px;
 }
 
-article {
+.card {
   @include card(2);
   padding: 5px;
   margin: 10px;
@@ -72,32 +73,33 @@ article {
   background-color: $color3;
 }
 
-header {
+.center {
   text-align: center;
   display: block;
 }
 
-ul {
-  padding-left: 0;
-  margin-bottom: 0;
-  > li {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  }
-}
+
 
 #skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  > article {
+  > .card {
     width: 220px;
-    > header {
+    > .center {
       background-color: $color5;
       border-radius: 2px;
       color: $color3;
       padding: 2px;
+    }
+    > ul {
+      padding-left: 0;
+      margin-bottom: 0;
+      > li {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      }
     }
   }
 }

@@ -2208,7 +2208,7 @@
 .color5 {
   background-color: #A4554A; }
 
-h2, h1 {
+.title {
   margin: 0;
   padding: 10px;
   background-color: #703439;
@@ -2216,12 +2216,13 @@ h2, h1 {
   border-radius: 2px;
   font-family: 'Open Sans Condensed', sans-serif; }
 
-#proskills {
+.banner-title {
+  display: block;
   background-color: #A4554A;
   color: #D9CFBE;
   font-weight: bold; }
 
-h3 {
+.flex-title {
   margin: 0; }
 
 .page {
@@ -2232,36 +2233,35 @@ h3 {
   color: #A4554A;
   padding-top: 10px; }
 
-article {
+.card {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
   padding: 5px;
   margin: 10px;
   border-radius: 2px;
   background-color: #D9CFBE; }
 
-header {
+.center {
   text-align: center;
   display: block; }
-
-ul {
-  padding-left: 0;
-  margin-bottom: 0; }
-  ul > li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between; }
 
 #skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
-  #skills > article {
+  #skills > .card {
     width: 220px; }
-    #skills > article > header {
+    #skills > .card > .center {
       background-color: #A4554A;
       border-radius: 2px;
       color: #D9CFBE;
       padding: 2px; }
+    #skills > .card > ul {
+      padding-left: 0;
+      margin-bottom: 0; }
+      #skills > .card > ul > li {
+        list-style: none;
+        display: flex;
+        justify-content: space-between; }
 
 .skillBar {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
